@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h2>Witaj w remember App !</h2>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+  </p>
+  <h3>Ilość słów: {{ numOfWords }}</h3>
+  <form action="" ng-submit="check()">
+    <div class="text-danger" ng-hide="isvalid">Liczba nie może być ujemna!</div>
+    <input style="width: 70px;margin: 0 auto" ng-change="check" type="number" class="form-control" ng-model="numOfWords">
+    <input type="submit" class="btn btn-lg btn-success" style="width: 12em; margin: 1em 0" value="START">
+  </form>
+</div>
+
