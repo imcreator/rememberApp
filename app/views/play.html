@@ -1,0 +1,33 @@
+
+<div class="jumbotron" ng-hide="test">
+	<div id="timer">
+		<span id="time" ng-click="clock()" style="cursor:pointer"><span id="minutes">{{ minutes }}</span>:<span id="seconds">{{ seconds }}</span><span id="miliseconds" style="font-size:0.75em;"></span>
+	</div><hr>
+
+	<div id="playground">
+		<h3>{{ getName()}}</h3>
+		<img ng-src="{{getSrc()}}" alt="" class="img img-responsive img-thumbnail">
+		<a href="" ng-click="next()"><span id="right_arrow" ng-hide="words.length - 1 === currentWord" class="glyphicon glyphicon-chevron-right arrow"></span></a>
+		<a href="" ng-click="prev();"><span id="left_arrow" ng-show="currentWord" class="glyphicon glyphicon-chevron-left arrow"></span></a>
+	</div>
+	<a href="" ng-click="changeState()" class="btn btn-lg btn-block btn-info" style="margin:1em 0">SPRAWDŹ</a>
+</div>
+
+<div class="jumbotron" ng-show="test">
+	<h2>Sprawdź swoją pamięć!</h2>
+	<span>Wpisz słowo nr. {{ currentWord + 1 }}</span>
+	<form ng-submit="checkWord()">
+		<input type="text" ng-model="testInput">
+		<input type="submit" value="ok">
+	</form>
+	<div class="alert alert-success" ng-show="words.length === wordsTest.length">
+  		<strong>Sukces!</strong> 
+	</div>
+	<div class="alert alert-warning" ng-show="theEnd">
+	  <strong>Przegrana</strong> Niestety nie udało się, spróbuj jeszcze <a href="/#/">raz</a>.
+	</div>
+	<div ng-repeat="word in wordsTest" style="padding: 1em 0;">
+		<span style="margin-right: 2em">{{word.name}}</span>
+		<img ng-src="{{word.src }}" alt="" width="50px">
+	</div>
+</div>

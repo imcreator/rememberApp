@@ -67,6 +67,45 @@ body {
   }
 }
 
+
+// CUSTOM STYLES
+#timer {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 3em auto;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+
+  #time {
+    line-height: 150px;
+    margin: 0 auto;
+    color: #FFF;
+    font-size: 2.5em;
+  }
+}
+
+#playground {
+  position: relative;
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+
+  }
+  #right_arrow {
+    right: 0;
+  }
+
+  #left_arrow {
+    left: 0;
+  }
+}
+
+#main {
+  margin-top: 10%;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {

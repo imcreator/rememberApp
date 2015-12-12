@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Słoń",
+    "src": "../images/elephant.jpeg"
+  },
+  {
+    "name": "Telefon",
+    "src": "../images/telephone.jpg"
+  },
+   {
+    "name": "Długopis",
+    "src": "../images/pen.jpg"
+  },
+   {
+    "name": "Gazeta",
+    "src": "../images/newspaper.jpg"
+  },
+   {
+    "name": "Kubek",
+    "src": "../images/cup.jpg"
+  }
+]

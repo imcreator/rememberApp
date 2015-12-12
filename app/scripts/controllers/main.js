@@ -8,10 +8,11 @@
  * Controller of the rememberAppApp
  */
 angular.module('rememberApp')
-  .controller('MainCtrl', function ($scope) {
-  	$scope.isvalid = true;
-  	$scope.numOfWords = 0;
-  	$scope.check = function() {
-  		console.log('hgello');
-  	}
-  });
+ 	.controller('MainCtrl', ['$scope', 'wordService', function($scope, wordService) {
+ 		$scope.numOfWords = 0;
+ 		$scope.setNumbers = function() {
+ 			wordService.set($scope.numOfWords);
+ 		};
+ 		$scope.number = wordService.get();
+ 		$scope.words = wordService.getWords();
+ 	}]);
